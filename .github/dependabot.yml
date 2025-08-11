@@ -1,0 +1,45 @@
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: 🤖
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: 🤖
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: 🤖
+  - package-ecosystem: docker-compose
+    directory: /
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: 🤖
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: 🤖
+  - package-ecosystem: swift
+    directory: /apple
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: 🤖
+  - package-ecosystem: gradle
+    directory: /android
+    schedule:
+      interval: daily
+    commit-message:
+      prefix: 🤖
+

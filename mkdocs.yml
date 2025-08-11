@@ -1,0 +1,102 @@
+
+site_name: TruCtrl Docs
+site_url: https://docs.tructrl.app
+site_author: McGuire Technology, LLC and TruCtrl Contributors
+site_description: Documentation for TruCtrl, a CMDB focused on Security Controls
+
+copyright: Copyright © 2025 McGuire Technology, LLC and TruCtrl Contributors
+
+repo_url: https://github.com/mcguiretechnology/tructrl
+repo_name: McGuireTechnology/TruCtrl
+
+theme:
+  name: material
+
+  palette:
+    - scheme: default
+      primary: purple
+      accent: black
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      primary: purple
+      accent: black
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  
+  features:
+    - content.action.edit
+    - content.action.view
+    - content.tabs.link
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.expand
+    - navigation.sections
+    - navigation.tracking
+    - navigation.expand
+    - navigation.prune
+    - navigation.indexes
+    - toc.follow
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.footer
+
+extra:
+  consent:
+    title: Cookie Consent
+    description: This site uses cookies to enhance your experience. By continuing to visit this site, you agree to our use of cookies.
+
+extra_css:
+  - css/styles.css
+
+plugins:
+  - include-markdown
+  - search
+  - tags
+  - blog
+  #- social
+  #- privacy
+  - macros:
+      module_name: mkdocs
+  - exclude:
+      glob:
+        - snippets/*
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+
+  - Blog:
+      - Blog Home: blog/index.md
+      # Add more blog posts here as needed
+
+  - User Guide:
+      - Introduction: user/index.md
+      - Template: user/template.md
+
+  - Deployment Guide: deployment/index.md
+
+  - Developer Guide:
+      - Alembic: developer/alembic.md
+      - MkDocs: developer/mkdocs.md
+      - VS Code: developer/vscode.md
+      - Linting: developer/linting.md
+      - GitHub: developer/github.md
+
+
+  - About: about/index.md

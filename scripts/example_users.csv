@@ -1,0 +1,8 @@
+# Example CSV file for bulk user creation
+# Save this as users.csv and use with: python scripts/user_manager.py bulk-create users.csv
+
+email,name,password,is_active
+john.doe@example.com,John Doe,SecurePass123!,true
+jane.smith@example.com,Jane Smith,AnotherPass456!,true
+admin@tructrl.app,Admin User,AdminPass789!,true
+test@example.com,Test User,TestPass000!,false

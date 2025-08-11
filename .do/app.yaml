@@ -1,0 +1,25 @@
+name: tructrl-api
+services:
+- name: api
+  source_dir: /
+  github:
+    repo: your-username/tructrl  # Replace with your GitHub repo
+    branch: main
+  run_command: |
+    alembic upgrade head && 
+    uvicorn api.app.main:app --host 0.0.0.0 --port $PORT
+  environment_slug: python
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  http_port: 8000
+  health_check:
+    http_path: /health
+  envs:
+  - key: PYTHONPATH
+    value: /app
+  - key: DATABASE_URL
+    value: sqlite:///app/data/tructrl.db
+  - key: PORT
+    value: "8000"
+databases: []
+static_sites: []
