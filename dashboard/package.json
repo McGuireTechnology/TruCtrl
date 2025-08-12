@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "bootstrap-icons": "^1.13.1",
-    "vue": "^3.5.17"
+    "vue": "^3.5.18"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.0",
